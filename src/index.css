@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: "Mukta", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}

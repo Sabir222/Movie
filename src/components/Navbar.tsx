@@ -16,7 +16,7 @@ function Navbar() {
   return (
     <div className="bg-[#C4C4C4] border-b-4 border-gray-950 flex items-center h-12 pl-8 gap-16  /*2xl:justify-center*/ mx-auto">
       <div className="">
-        <a href="/">
+        <Link to="/Home">
           <svg
             className="w-10 h-10"
             xmlns="http://www.w3.org/2000/svg"
@@ -24,11 +24,11 @@ function Navbar() {
           >
             <path d="M448 32H361.9l-1 1-127 127h92.1l1-1L453.8 32.3c-1.9-.2-3.8-.3-5.8-.3zm64 128V96c0-15.1-5.3-29.1-14-40l-104 104H512zM294.1 32H201.9l-1 1L73.9 160h92.1l1-1 127-127zM64 32C28.7 32 0 60.7 0 96v64H6.1l1-1 127-127H64zM512 192H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V192z" />
           </svg>
-        </a>
+        </Link>
       </div>
       <ul className="hidden gap-16 pr-16 mr-auto text-2xl font-bold md:flex font-mukta ">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/Home">Home</Link>
         </li>
         <li>
           <Link to="/Contact">Contact</Link>
@@ -62,15 +62,15 @@ function Navbar() {
 
         <ul className="flex-col">
           <li className="p-4 text-2xl border-b-2 border-gray-950">
-            <Link to="/">
-              <AiOutlineHome className="inline-block mr-4 align-text-center"/>
+            <Link to="/Home">
+              <AiOutlineHome className="inline-block mr-4 align-text-center" />
               Home
             </Link>
           </li>
           <li className="p-4 text-2xl border-b-2 border-gray-950">
             <Link to="/Contact">
               {" "}
-              <AiOutlineContacts className="inline-block mr-4 align-text-center"/>
+              <AiOutlineContacts className="inline-block mr-4 align-text-center" />
               Contact
             </Link>
           </li>

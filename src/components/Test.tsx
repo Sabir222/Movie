@@ -174,7 +174,7 @@ const Test = () => {
         </form>
         <div className="flex justify-center pb-10 text-5xl font-bold">
           <h1 className="text-decoration-underline">
-            {isSubmit ? `Search result for : ${search} ` : "Trending now"}
+            {isSubmit ? `Search result for : ${search} ` : "Trending"}
           </h1>
         </div>
         <div className="flex justify-center">

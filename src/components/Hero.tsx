@@ -164,11 +164,11 @@ const Hero = () => {
               aria-label="Search movie"
               name="search"
               placeholder="Search for Movies..."
-              className="bg-[#C4C4C4]  bg-contain py-2 pl-12 h-[45px] w-[270px]  text-lg font-bold placeholder-gray-500 text-black rounded-2xl border-none ring-4 ring-gray-950 focus:ring-gray-950 focus:ring-4   focus:outline-none lg:w-[800px]  lg:h-[70px] lg:text-3xl md:w-[550px] md:h-[55px] md:text-2xl sm:w-[400px] sm:h-[45px] sm:text-lg"
+              className="bg-[#CCEEBC]  bg-contain py-2 pl-12 h-[45px] w-[270px]  text-lg font-bold placeholder-gray-500 text-black rounded-2xl border-none ring-4 ring-gray-950 focus:ring-gray-950 focus:ring-4   focus:outline-none lg:w-[800px]  lg:h-[70px] lg:text-3xl md:w-[550px] md:h-[55px] md:text-2xl sm:w-[400px] sm:h-[45px] sm:text-lg"
             />
             <button
               type="submit"
-              className="bg-[#C4C4C4] rounded-full lg:h-[70px] lg:w-[70px] flex items-center justify-center ring-4 ring-gray-950 h-[45px] w-[45px]  md:w-[55px] md:h-[55px] active:bg-[#989696]"
+              className="bg-[#8CC0DE] rounded-full lg:h-[70px] lg:w-[70px] flex items-center justify-center ring-4 ring-gray-950 h-[45px] w-[45px]  md:w-[55px] md:h-[55px] active:bg-[#989696]"
             >
               <AiOutlineSearch className="w-6 h-6 pointer-events-none lg:w-10 lg:h-10 md:w-8 md:h-8" />
             </button>

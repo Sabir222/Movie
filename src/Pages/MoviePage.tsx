@@ -117,9 +117,7 @@ const MoviePage: React.FC = () => {
       );
     });
   };
-  // console.log(
-  //   `${imageUrl}${movieData[0]?.belongs_to_collection?.backdrop_path}`
-  // );
+
 
   return (
     <div className="flex flex-col items-center justify-center">
@@ -129,7 +127,7 @@ const MoviePage: React.FC = () => {
             src={`${imageUrl}${movieData[0]?.backdrop_path}`}
             className="object-cover w-full h-full "
           />
-          <button className="absolute bottom-0 right-0 m-5 transition-colors duration-300 ring-1 active:bg-[#7d7c7c]  ring-black bg-[#C4C4C4] p-4 font-bold rounded-2xl  sm:px-7 sm:py-4 sm:text-2xl md:px-7 md:py-5 md:text-3xl">
+          <button className="absolute bottom-0 right-0 m-5 transition-colors duration-300 ring-1 active:bg-[#a5c199]  ring-black bg-[#CCEEBC] p-4 font-bold rounded-2xl  sm:px-7 sm:py-4 sm:text-2xl md:px-7 md:py-5 md:text-3xl">
             Trailer
           </button>
         </div>
@@ -138,12 +136,12 @@ const MoviePage: React.FC = () => {
             <div className="flex justify-center pb-2">
               <h1>Plot Summary</h1>
             </div>
-            <div className="  w-full  ring-1 ring-gray-950 p-2 rounded-2xl bg-[#ededed] shadow-lg">
+            <div className="  w-full  ring-1 ring-gray-950 p-2 rounded-2xl bg-[#8CC0DE] shadow-lg">
               <p>{movieData[0]?.overview}</p>
             </div>
           </div>
 
-          <div className=" ring-1 order-1 md:w-[25%] md:order-1 shadow-lg ring-gray-950 p-4 rounded-2xl bg-[#ededed] w-full">
+          <div className=" ring-1 order-1 md:w-[25%] md:order-1 shadow-lg ring-gray-950 p-4 rounded-2xl bg-[#8CC0DE] w-full">
             <h1 className="text-lg font-bold">Top cast</h1>
             <hr className="pb-2 font-bold border-t border-gray-700" />
 
@@ -154,7 +152,7 @@ const MoviePage: React.FC = () => {
           <h1 className="pb-4 text-2xl">Movie Reviews</h1>
         </div>
         <div className="px-3 pb-11 lg:px-[10%]">
-          <div className="ring-1 shadow-lg ring-gray-950 p-4 rounded-2xl bg-[#ededed] px-4">
+          <div className="ring-1 shadow-lg ring-gray-950 p-4 rounded-2xl bg-[#8CC0DE] px-4">
             {reviewJsx()}
           </div>
         </div>

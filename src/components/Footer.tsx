@@ -5,7 +5,7 @@ import {
 } from "react-icons/ai";
 function Footer() {
   return (
-    <footer className=" w-full bg-[#c4c4c4] border-t-4 h-[30px] border-gray-950 flex items-center justify-between px-16 md:px-32">
+    <footer className=" w-full bg-[#FFD9C0] border-t-4 h-[30px] border-gray-950 flex items-center justify-between px-16 md:px-32">
       <div>
         <h1 className="text-[10px]">
           <span>&copy;</span> All rights reserved

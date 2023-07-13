@@ -14,7 +14,7 @@ function Navbar() {
     setNav(!nav);
   };
   return (
-    <div className="bg-[#C4C4C4] border-b-4 border-gray-950 flex items-center h-12 pl-8 gap-16  /*2xl:justify-center*/ mx-auto">
+    <div className="bg-[#FFD9C0] border-b-4 border-gray-950 flex items-center h-12 pl-8 gap-16  /*2xl:justify-center*/ mx-auto">
       <div className="">
         <Link to="/Home">
           <svg

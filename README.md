@@ -1,11 +1,12 @@
 # Movie Website
 
-This is a movie website built using Tailwind CSS, React, TypeScript, and Vite. The website displays trending movies and provides detailed information about each movie when clicked.
+This is a movie website built using Tailwind CSS, React, TypeScript, and Vite. The website displays trending movies and provides detailed information and the trailer about each movie when clicked.
 
 ## Features
 
 - Trending movies display: The website shows a list of trending movies.
 - Movie details: Clicking on a movie card opens a separate page displaying detailed information about the movie.
+- Provides the trailer of the movie.
 - Responsive design: The website is designed to be responsive and accessible on different devices and screen sizes.
 
 ## Technologies Used

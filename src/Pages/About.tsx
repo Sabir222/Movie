@@ -8,7 +8,9 @@ function About() {
   return (
     <>
       <div className="flex flex-col items-center justify-center px-5 pt-52 sm:px-14">
-        <h1 className="text-5xl bg-[#CCEEBC] p-4 mb-4 rounded-md ring-4 ring-black">About me</h1>
+        <h1 className="text-5xl bg-[#CCEEBC] p-4 mb-4 rounded-md ring-4 ring-black">
+          About me
+        </h1>
         <div className="p-2 text-center md:p-10 ring-black md:text-3xl ring-4 bg-[#8CC0DE] rounded-xl md:w-[720px]">
           Hello, I'm <span className="text-[#CCEEBC]">Sabir KOUTABI</span>, a
           self-taught developer with a passion for becoming a great full-stack
@@ -19,8 +21,7 @@ function About() {
             <BiLogoTailwindCss className="inline align-middle" />
           </span>
           <span>
-            {" "}
-            Reactjs
+            , Reactjs
             <BiLogoReact className="inline align-middle" />
           </span>
           , and

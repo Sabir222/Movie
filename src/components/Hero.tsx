@@ -109,7 +109,7 @@ const Hero = () => {
       const movieRating = vote_average || "N/A";
       const moviePoster = poster_path
         ? imageUrl + poster_path
-        : "/public/NO-MOVIE-POSTERS-EDITED.jpg";
+        : "/NO-MOVIE-POSTERS-EDITED.jpg";
       const movieReleaseDate = release_date || "Unknown Release Date";
       return (
         <div className="flex-col items-center justify-center">

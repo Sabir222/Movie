@@ -118,45 +118,53 @@ const MoviePage: React.FC = () => {
     });
   };
 
-
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="flex flex-col  min-h-screen  max-w-[1924px]">
-        <div className="relative h-[400px] rounded-bl-[60px] shadow-2xl overflow-hidden rounded-br-[60px] ">
-          <img
-            src={`${imageUrl}${movieData[0]?.backdrop_path}`}
-            className="object-cover w-full h-full "
-          />
+    <div className="flex flex-col items-center justify-center ">
+      <div className="min-h-screen  max-w-[1924px]">
+        <div className="relative h-[400px] rounded-bl-[60px] shadow-2xl overflow-hidden  rounded-br-[60px] ">
+          {movieData[0]?.backdrop_path ? (
+            <img
+              src={`${imageUrl}${movieData[0]?.backdrop_path}`}
+              className="object-cover w-full h-full"
+            />
+          ) : (
+            <img src="/noPoster.jpg" className="object-cover w-full h-full" />
+          )}
+
           <button className="absolute bottom-0 right-0 m-5 transition-colors duration-300 ring-1 active:bg-[#a5c199]  ring-black bg-[#CCEEBC] p-4 font-bold rounded-2xl  sm:px-7 sm:py-4 sm:text-2xl md:px-7 md:py-5 md:text-3xl">
             Trailer
           </button>
         </div>
-        <div className="flex flex-col items-start gap-3 px-3 py-6 md:flex-row lg:px-[10%]">
-          <div className="md:order-1 order-2 md:w-[75%]">
-            <div className="flex justify-center pb-2">
-              <h1>Plot Summary</h1>
+        <div className="md:px-[10%]">
+          
+          <div className="flex flex-col items-start gap-3 px-3 py-6 md:flex-row ">
+            <div className="md:order-1 order-2 md:w-[75%] ">
+              <div className="flex justify-center pb-2">
+                <h1>Plot Summary</h1>
+              </div>
+              <div className="  w-full  ring-1 ring-gray-950 p-2 rounded-2xl bg-[#8CC0DE] shadow-lg">
+                <p>{movieData[0]?.overview}</p>
+              </div>
             </div>
-            <div className="  w-full  ring-1 ring-gray-950 p-2 rounded-2xl bg-[#8CC0DE] shadow-lg">
-              <p>{movieData[0]?.overview}</p>
+
+            <div className=" ring-1 order-1 md:w-[25%] md:order-1 shadow-lg ring-gray-950 p-4 rounded-2xl bg-[#8CC0DE] w-full">
+              <h1 className="text-lg font-bold">Top cast</h1>
+              <hr className="pb-2 font-bold border-t border-gray-700" />
+
+              <div>{castJsx()}</div>
             </div>
           </div>
-
-          <div className=" ring-1 order-1 md:w-[25%] md:order-1 shadow-lg ring-gray-950 p-4 rounded-2xl bg-[#8CC0DE] w-full">
-            <h1 className="text-lg font-bold">Top cast</h1>
-            <hr className="pb-2 font-bold border-t border-gray-700" />
-
-            <div>{castJsx()}</div>
+          <div className="flex justify-center">
+            <h1 className="pb-4 text-2xl">Movie Reviews</h1>
           </div>
-        </div>
-        <div className="flex justify-center">
-          <h1 className="pb-4 text-2xl">Movie Reviews</h1>
-        </div>
-        <div className="px-3 pb-11 lg:px-[10%]">
-          <div className="ring-1 shadow-lg ring-gray-950 p-4 rounded-2xl bg-[#8CC0DE] px-4">
-            {reviewJsx()}
+          <div className="px-3 pb-11 ">
+            <div className="ring-1 shadow-lg ring-gray-950 p-4 rounded-2xl bg-[#8CC0DE] px-4">
+              {reviewJsx()}
+            </div>
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );

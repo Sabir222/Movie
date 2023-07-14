@@ -58,7 +58,11 @@ const Modal: React.FC<IModalProps> = ({
           X
         </button>
         <div className="p-5 rounded-md">
-          <YouTube videoId={trailer[0].key} />
+          {trailer[0] ? (
+            <YouTube videoId={trailer[0].key} />
+          ) : (
+            <p className="p-10 text-center bg-white">No trailer available</p>
+          )}
         </div>
       </div>
     </div>

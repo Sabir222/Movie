@@ -75,10 +75,14 @@ const MoviePage: React.FC = () => {
     return castData.slice(0, 6).map((movie, key) => {
       return (
         <div className="flex flex-col " key={key}>
-          {" "}
           <div className="flex items-center gap-2 pb-2">
             <img
-              src={`${imageUrl2}${movie.profile_path}`}
+              src={
+                movie.profile_path
+                  ? `${imageUrl2}${movie.profile_path}`
+                  : "/202-2024994_profile-icon-profile-logo-no-background.png"
+              }
+              // src={`${imageUrl2}${movie.profile_path}`}
               alt=""
               className="object-cover w-10 h-10 rounded-full"
             />

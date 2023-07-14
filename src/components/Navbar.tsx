@@ -16,7 +16,7 @@ function Navbar() {
   return (
     <div className="bg-[#FFD9C0] fixed z-10 top-0 w-full border-b-4 border-gray-950 flex items-center h-12 pl-8 gap-16  /*2xl:justify-center*/ mx-auto">
       <div className="">
-        <Link to="/Home">
+        <Link to="/">
           <svg
             className="w-10 text-[#367092] h-10"
             xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ function Navbar() {
       </div>
       <ul className="hidden gap-16 pr-16 mr-auto text-2xl font-bold md:flex font-mukta ">
         <li>
-          <Link to="/Home">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/Contact">Contact</Link>
@@ -62,7 +62,7 @@ function Navbar() {
 
         <ul className="flex-col">
           <li className="p-4 text-2xl border-b-2 border-gray-950">
-            <Link to="/Home">
+            <Link to="/">
               <AiOutlineHome className="inline-block text-[#367092] mr-4 align-text-center" />
               Home
             </Link>

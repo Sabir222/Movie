@@ -18,7 +18,7 @@ function Navbar() {
       <div className="">
         <Link to="/Home">
           <svg
-            className="w-10 h-10"
+            className="w-10 text-[#367092] h-10"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
           >
@@ -38,13 +38,13 @@ function Navbar() {
         </li>
       </ul>
       <div onClick={handleNav} className="pr-4 ml-auto md:hidden">
-        {nav ? <AiOutlineMenu size={40} /> : <AiOutlineClose size={40} />}
+        {nav ? <AiOutlineMenu className="text-[#367092]" size={40} /> : <AiOutlineClose className="text-[#367092]" size={40} />}
       </div>
 
       <div
         className={
           !nav
-            ? " md:hidden border-r-2 z-50 border-gray-950 font-bold text-5xl h-full flex-col gap-16 font-mukta  bg-[#C4C4C4] fixed top-0 left-0  w-[41%]   ease-in-out duration-300"
+            ? " md:hidden border-r-2 z-50 border-gray-950 font-bold text-5xl h-full flex-col gap-16 font-mukta  bg-[#FFD9C0] fixed top-0 left-0  w-[41%]   ease-in-out duration-300"
             : "fixed left-[-100%] "
         }
       >
@@ -63,20 +63,20 @@ function Navbar() {
         <ul className="flex-col">
           <li className="p-4 text-2xl border-b-2 border-gray-950">
             <Link to="/Home">
-              <AiOutlineHome className="inline-block mr-4 align-text-center" />
+              <AiOutlineHome className="inline-block text-[#367092] mr-4 align-text-center" />
               Home
             </Link>
           </li>
           <li className="p-4 text-2xl border-b-2 border-gray-950">
             <Link to="/Contact">
               {" "}
-              <AiOutlineContacts className="inline-block mr-4 align-text-center" />
+              <AiOutlineContacts className="inline-block text-[#367092] mr-4 align-text-center" />
               Contact
             </Link>
           </li>
           <li className="p-4 text-2xl border-b-2 border-gray-950">
             <Link to="/About">
-              <AiOutlineInfoCircle className="inline-block mr-4 align-text-center" />
+              <AiOutlineInfoCircle className="inline-block text-[#367092] mr-4 align-text-center" />
               About
             </Link>
           </li>

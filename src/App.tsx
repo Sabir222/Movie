@@ -1,3 +1,4 @@
+import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Home from "./Pages/Home";
 import MoviePage from "./Pages/MoviePage";
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/About" element={<About />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/movie/:id" element={<MoviePage />} />
 

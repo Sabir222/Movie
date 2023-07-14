@@ -135,7 +135,7 @@ const MoviePage: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="flex flex-col  min-h-screen  max-w-[1924px]">
-        <div className="relative h-[400px] rounded-bl-[60px] shadow-2xl overflow-hidden rounded-br-[60px] ">
+        <div className="relative h-[400px]  rounded-bl-[60px] shadow-2xl overflow-hidden rounded-br-[60px] ">
           <img
             src={`${imageUrl}${movieData[0]?.backdrop_path}`}
             className="object-cover w-full h-full "

@@ -87,7 +87,7 @@ const MoviePage: React.FC = () => {
               className="object-cover w-10 h-10 rounded-full"
             />
             <h1>
-              {movie.name}{" "}
+              {movie.name}
               <span className="font-extrabold text-gray-500 underline ">
                 As {movie.character}
               </span>
@@ -112,6 +112,9 @@ const MoviePage: React.FC = () => {
   }, [id]);
 
   const reviewJsx = () => {
+    if (reviews.length === 0) {
+      return <p className="text-center"> No reviews available yet</p>;
+    }
     return reviews.slice(0, 10).map((review, key) => {
       return (
         <div key={key}>

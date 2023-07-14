@@ -133,46 +133,59 @@ const MoviePage: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
-      <div className="flex flex-col  min-h-screen  max-w-[1924px]">
-        <div className="relative h-[400px]  rounded-bl-[60px] shadow-2xl overflow-hidden rounded-br-[60px] ">
-          <img
-            src={`${imageUrl}${movieData[0]?.backdrop_path}`}
-            className="object-cover w-full h-full "
-          />
-          <button
-            onClick={() => setShowModal(true)}
-            className="absolute bottom-0 right-0 m-5 transition-colors duration-300 ring-1 active:bg-[#7d7c7c]  ring-black bg-[#C4C4C4] p-4 font-bold rounded-2xl  sm:px-7 sm:py-4 sm:text-2xl md:px-7 md:py-5 md:text-3xl"
-          >
-            Trailer
-          </button>
-        </div>
-        <div className="flex flex-col items-start gap-3 px-3 py-6 md:flex-row lg:px-[10%]">
-          <div className="md:order-1 order-2 md:w-[75%]">
-            <div className="flex justify-center pb-2">
-              <h1>Plot Summary</h1>
-            </div>
-            <div className="  w-full  ring-1 ring-gray-950 p-2 rounded-2xl bg-[#ededed] shadow-lg">
-              <p>{movieData[0]?.overview}</p>
-            </div>
-          </div>
+    <div>
+      <div className="min-h-screen">
+        <div className="flex items-start justify-center mb-10 md:px-2">
+          <div className="  md:w-[700px] relative rounded-b-[100px] lg:w-[1000px] drop-shadow-xl ">
+            {movieData[0]?.backdrop_path ? (
+              <img
+                src={`${imageUrl}${movieData[0]?.backdrop_path}`}
+                className="object-cover  rounded-b-[100px]   w-full h-full "
+              />
+            ) : (
+              <img
+                src={`/pxfuel.jpg`}
+                className="object-cover  rounded-b-[100px]   w-full h-full "
+              />
+            )}
 
-          <div className=" ring-1 order-1 md:w-[25%] md:order-1 shadow-lg ring-gray-950 p-4 rounded-2xl bg-[#ededed] w-full">
-            <h1 className="text-lg font-bold">Top cast</h1>
-            <hr className="pb-2 font-bold border-t border-gray-700" />
-
-            <div>{castJsx()}</div>
+            <button
+              onClick={() => setShowModal(true)}
+              className="absolute bottom-0 right-0 m-10 transition-colors duration-300 ring-1 active:bg-[#819a76]  ring-black bg-[#CCEEBC] p-4 font-bold rounded-2xl  sm:px-7 sm:py-4 sm:text-2xl md:px-7 md:py-5 md:text-3xl"
+            >
+              Trailer
+            </button>
           </div>
         </div>
-        <div className="flex justify-center">
-          <h1 className="pb-4 text-2xl">Movie Reviews</h1>
+        <div className="flex items-center justify-center ">
+          <div className="flex flex-col sm:flex-row gap-8 w-full  p-2 md:w-[700px] lg:w-[1000px] ">
+            <div className=" order-2 sm:order-1 sm:w-[75%] ">
+              <h1 className="pb-2 text-xl text-center bg-transparent">
+                Summary
+              </h1>
+              <div className="p-2 text-center flex justify-center items-center bg-[#8CC0DE] rounded-lg drop-shadow-xl ring-4 ring-black min-h-[40px] ">
+                {movieData[0]?.overview ? (
+                  <p>{movieData[0]?.overview}</p>
+                ) : (
+                  <p>No summary Available</p>
+                )}
+              </div>
+            </div>
+            <div className="bg-[#CCEEBC] order-1 min-h-[40px] sm:order-2 sm:w-[25%] ring-4 rounded-lg p-2 ring-black drop-shadow-xl">
+              <h1 className="text-lg font-bold">Top cast</h1>
+              <hr className="pb-2 font-bold border-t border-gray-700" />
+
+              <div>{castJsx()}</div>
+            </div>
+          </div>
         </div>
-        <div className="px-3 pb-11 lg:px-[10%]">
-          <div className="ring-1 shadow-lg ring-gray-950 p-4 rounded-2xl bg-[#ededed] px-4">
+        <div className="flex items-center justify-center px-2 mb-16 mt-9">
+          <div className=" w-full p-2 md:w-[700px]  lg:w-[1000px] px-5 bg-[#8CC0DE] rounded-lg drop-shadow-xl ring-4 ring-black min-h-[40px]">
             {reviewJsx()}
           </div>
         </div>
       </div>
+
       <Modal
         isVisible={showModal}
         onClose={() => setShowModal(false)}

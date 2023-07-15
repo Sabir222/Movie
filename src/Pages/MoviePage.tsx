@@ -80,7 +80,7 @@ const MoviePage: React.FC = () => {
               src={
                 movie.profile_path
                   ? `${imageUrl2}${movie.profile_path}`
-                  : "/202-2024994_profile-icon-profile-logo-no-background.png"
+                  : "movie/202-2024994_profile-icon-profile-logo-no-background.png"
               }
               // src={`${imageUrl2}${movie.profile_path}`}
               alt=""
@@ -144,7 +144,7 @@ const MoviePage: React.FC = () => {
               />
             ) : (
               <img
-                src={`/pxfuel.jpg`}
+                src={`movie/pxfuel.jpg`}
                 className="object-cover  rounded-b-[100px]   w-full h-full "
               />
             )}

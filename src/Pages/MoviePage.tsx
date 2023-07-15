@@ -80,7 +80,7 @@ const MoviePage: React.FC = () => {
               src={
                 movie.profile_path
                   ? `${imageUrl2}${movie.profile_path}`
-                  : "movie/202-2024994_profile-icon-profile-logo-no-background.png"
+                  : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
               }
               // src={`${imageUrl2}${movie.profile_path}`}
               alt=""
@@ -144,7 +144,7 @@ const MoviePage: React.FC = () => {
               />
             ) : (
               <img
-                src={`movie/pxfuel.jpg`}
+                src={`https://images.unsplash.com/photo-1604147706283-d7119b5b822c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80`}
                 className="object-cover  rounded-b-[100px]   w-full h-full "
               />
             )}

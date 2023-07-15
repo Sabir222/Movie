@@ -128,9 +128,6 @@ const Hero = () => {
                   <AiFillStar className="text-[#FFD700]" />
                   {movieRating}
                 </h1>
-                {/* <button className="bg-green-400">ADD to list</button>
-                <br />
-                <button className="bg-red-400">Details</button> */}
               </div>
             </div>
             <div>

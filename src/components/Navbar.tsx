@@ -16,7 +16,7 @@ function Navbar() {
   return (
     <div className="bg-[#FFD9C0] fixed z-10 top-0 w-full border-b-4 border-gray-950 flex items-center h-12 pl-8 gap-16  /*2xl:justify-center*/ mx-auto">
       <div className="">
-        <Link to="/movie">
+        <Link to="/">
           <svg
             className="w-10 text-[#367092] h-10"
             xmlns="http://www.w3.org/2000/svg"
@@ -28,13 +28,13 @@ function Navbar() {
       </div>
       <ul className="hidden gap-16 pr-16 mr-auto text-2xl font-bold md:flex font-mukta ">
         <li>
-          <Link to="/movie">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/movie/Contact">Contact</Link>
+          <Link to="/Contact">Contact</Link>
         </li>
         <li>
-          <Link to="/movie/About">About</Link>
+          <Link to="/About">About</Link>
         </li>
       </ul>
       <div onClick={handleNav} className="pr-4 ml-auto md:hidden">
@@ -53,7 +53,7 @@ function Navbar() {
         }
       >
         <div className="flex items-center gap-10 p-4 pb-16 border-b-8 border-gray-950">
-          <a href="/movie" className="">
+          <a href="/" className="">
             <svg
               className="w-16 h-16"
               xmlns="http://www.w3.org/2000/svg"
@@ -66,19 +66,19 @@ function Navbar() {
 
         <ul className="flex-col">
           <li className="p-4 text-2xl border-b-2 border-gray-950">
-            <Link to="/movie">
+            <Link to="/">
               <AiOutlineHome className="inline-block text-[#367092] mr-4 align-text-center" />
               Home
             </Link>
           </li>
           <li className="p-4 text-2xl border-b-2 border-gray-950">
-            <Link to="/movie/Contact">
+            <Link to="/Contact">
               <AiOutlineContacts className="inline-block text-[#367092] mr-4 align-text-center" />
               Contact
             </Link>
           </li>
           <li className="p-4 text-2xl border-b-2 border-gray-950">
-            <Link to="/movie/About">
+            <Link to="/About">
               <AiOutlineInfoCircle className="inline-block text-[#367092] mr-4 align-text-center" />
               About
             </Link>

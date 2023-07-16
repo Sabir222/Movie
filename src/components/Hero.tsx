@@ -59,9 +59,6 @@ const Hero = () => {
                   <AiFillStar className="text-[#FFD700]" />
                   {movie.vote_average}
                 </h1>
-                {/* <button className="bg-green-400">ADD to list</button>
-                <br />
-                <button className="bg-red-400">Details</button> */}
               </div>
             </div>
             <div>
@@ -105,6 +102,7 @@ const Hero = () => {
     return searchResults.map((movie) => {
       //this better way to store data compared to the first method because it allow to set default value is data comes null.
       const { title, vote_average, poster_path, release_date } = movie;
+
       const movieTitle = title || "Unknown Title";
       const movieRating = vote_average || "N/A";
       const moviePoster = poster_path

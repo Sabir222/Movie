@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { AiOutlineSearch, AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import useDebounce from "../hooks/useDebounce";
 const key = "6efb5e9d888376f927bb1ed22dbe4752";
 const url = "https://api.themoviedb.org/3";
 const imageUrl = "https://image.tmdb.org/t/p/w500/";
@@ -25,6 +26,9 @@ const Hero = () => {
   const [isSubmit, setIsSubmit] = useState(false);
   const [searchResults, setSearchResult] = useState<IData[]>([]);
   //fetching Trending movies data
+
+  //debounce
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -75,6 +79,8 @@ const Hero = () => {
     });
   };
 
+  const debouncedSearch = useDebounce(search, 1000);
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     setIsSubmit(true);
@@ -85,7 +91,7 @@ const Hero = () => {
       if (isSubmit) {
         try {
           const result = await axios.get<IResponse>(
-            `${url}/search/movie?query=${search}&api_key=${key}&page=1`
+            `${url}/search/movie?query=${debouncedSearch}&api_key=${key}&page=1`
           );
           setSearchResult(result.data.results);
         } catch (err) {
@@ -93,10 +99,10 @@ const Hero = () => {
         }
       }
     };
-    if (isSubmit) {
+    if (isSubmit && debouncedSearch) {
       void fetchSearch();
     }
-  }, [isSubmit, search]);
+  }, [isSubmit, debouncedSearch]);
   //rendering search results
   const searchJsx = () => {
     return searchResults.map((movie, key) => {

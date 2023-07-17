@@ -121,10 +121,13 @@ const MoviePage: React.FC = () => {
           <h1 className="pb-2 text-lg">
             Reviewed by
             <span className="font-extrabold text-gray-500 underline">
-              {review.author}
+              {review.author ?? "unknown"}
             </span>
           </h1>
-          <h1 className="pb-2">Rating : {review.author_details.rating}/10</h1>
+          <h1 className="pb-2">
+            Rating :{review.author_details.rating ?? "N/A"}
+            /10
+          </h1>
           <p className="pb-2">{review.content}</p>
           <hr className="pb-2 font-bold border-t border-gray-700" />
         </div>

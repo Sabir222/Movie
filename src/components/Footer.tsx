@@ -4,6 +4,9 @@ import {
   AiOutlineYoutube,
 } from "react-icons/ai";
 function Footer() {
+  const handleClick = () => {
+    window.open("https://github.com/Sabir222/Movie");
+  };
   return (
     <footer className=" w-full bg-[#FFD9C0] border-t-4 h-[30px] border-gray-950 flex items-center justify-between px-16 md:px-32">
       <div>
@@ -15,7 +18,7 @@ function Footer() {
         <button>
           <AiOutlineInstagram />
         </button>
-        <button>
+        <button onClick={handleClick}>
           <AiOutlineGithub />
         </button>
         <button>

@@ -3,11 +3,12 @@ import {
   BiLogoTailwindCss,
   BiLogoTypescript,
 } from "react-icons/bi";
+import Footer from "../components/Footer";
 
 function About() {
   return (
-    <>
-      <div className="flex flex-col items-center justify-center px-5 pt-52 sm:px-14">
+    <div className="">
+      <div className="flex flex-col items-center justify-center min-h-screen px-5 sm:px-14">
         <h1 className="text-5xl bg-[#CCEEBC] p-4 mb-4 rounded-md ring-4 ring-black">
           About me
         </h1>
@@ -26,7 +27,6 @@ function About() {
           </span>
           , and
           <span>
-            {" "}
             Typescript
             <BiLogoTypescript className="inline align-middle" />
           </span>
@@ -36,7 +36,8 @@ function About() {
           website.
         </div>
       </div>
-    </>
+      <Footer />
+    </div>
   );
 }
 

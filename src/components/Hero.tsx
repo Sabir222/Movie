@@ -99,7 +99,7 @@ const Hero = () => {
   }, [isSubmit, search]);
   //rendering search results
   const searchJsx = () => {
-    return searchResults.map((movie) => {
+    return searchResults.map((movie, key) => {
       //this better way to store data compared to the first method because it allow to set default value is data comes null.
       const { title, vote_average, poster_path, release_date } = movie;
 
@@ -153,7 +153,7 @@ const Hero = () => {
             <input
               required
               onChange={(e) => setSearch(e.target.value)}
-              onBlur={() => setIsSubmit(false)}
+              // onBlur={() => setIsSubmit(false)}
               type="text"
               value={search}
               aria-label="Search movie"

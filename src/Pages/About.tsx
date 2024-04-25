@@ -13,7 +13,7 @@ function About() {
           About me
         </h1>
         <div className="p-2 text-center md:p-10 ring-black md:text-3xl ring-4 bg-[#8CC0DE] rounded-xl md:w-[720px]">
-          Hello, I'm <span className="text-[#CCEEBC]">Sabir KOUTABI</span>, a
+          Hello, I'm <span className="text-[#CCEEBC]">Imam KOUTABI</span>, a
           self-taught developer with a passion for becoming a great full-stack
           developer. Welcome to my website! Using the powerful combination of
           <span>
